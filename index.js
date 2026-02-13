@@ -1,8 +1,13 @@
-function openLetter() {
-  const container = document.querySelector('.container');
-  container.classList.toggle('open');
+const container = document.querySelector('.container');
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
+const music = document.getElementById('bgMusic');
 
-  document.getElementById("bgMusic").play();
+container.addEventListener('click', openLetter);
+
+function openLetter() {
+  container.classList.toggle('open');
+  music.play();
 
   const elements = document.querySelectorAll('.hidden');
 
@@ -15,25 +20,16 @@ function openLetter() {
   }, 500);
 }
 
-function yes(e){
+yesBtn.addEventListener('click', function(e) {
   e.stopPropagation();
   alert("Muchas gracias por aceptar, te quiero mucho 💖✨\n\nExtráñame poquito ✨");
-}
+});
 
-function moveNo(e){
+noBtn.addEventListener('click', function(e) {
   e.stopPropagation();
-  let x=Math.random()*200-100;
-  let y=Math.random()*200-100;
-  document.getElementById("noBtn").style.transform=`translate(${x}px,${y}px)`;
-}
 
-// Lluvia de corazones
-setInterval(()=>{
-  let h=document.createElement("div");
-  h.className="heart";
-  h.innerHTML="💖";
-  h.style.left=Math.random()*100+"vw";
-  h.style.animationDuration=(Math.random()*3+2)+"s";
-  document.body.appendChild(h);
-  setTimeout(()=>h.remove(),5000);
-},300);
+  let x = Math.random()*200 - 100;
+  let y = Math.random()*200 - 100;
+
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});

@@ -1,23 +1,41 @@
-<div class="envelope" onclick="openLetter()">
-  <div class="card">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💖 Mine 💖</title>
 
-    <h2>💖 Mine 💖</h2>
+  <!-- Conexión al CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
 
-    <p>Desde que llegaste a mi vida todo es más bonito.</p>
+<body>
 
-    <p>¿Quieres ser mi San Valentín? 🌹</p>
+  <div class="envelope" onclick="openLetter()">
+    <div class="card">
 
-    <p>Con cariño<br><b>Hector</b></p>
+      <h2>💖 Mine 💖</h2>
 
-    <button onclick="yes()">Sí 💕</button>
-    <button id="noBtn" onmouseover="moveNo()">No 😈</button>
+      <p>Desde que llegaste a mi vida todo es más bonito.</p>
+      <p>¿Quieres ser mi San Valentín? 🌹</p>
 
+      <p>Con cariño<br><b>Hector</b></p>
+
+      <button onclick="yes()">Sí 💕</button>
+      <button id="noBtn" onmouseover="moveNo()">No 😈</button>
+
+    </div>
   </div>
-</div>
 
-<!-- Música: Otro Atardecer de Bad Bunny -->
-<iframe
-  src="https://www.youtube.com/embed/xBpqkPl8E_Y?autoplay=1&loop=1&playlist=xBpqkPl8E_Y"
-  allow="autoplay"
-  style="display:none;">
-</iframe>
+  <!-- Música (autoplay con mute para que no la bloquee el navegador) -->
+  <iframe
+    src="https://www.youtube.com/embed/xBpqkPl8E_Y?autoplay=1&mute=1&loop=1&playlist=xBpqkPl8E_Y"
+    allow="autoplay"
+    style="display:none;">
+  </iframe>
+
+  <!-- Conexión al JS -->
+  <script src="index.js"></script>
+
+</body>
+</html>

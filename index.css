@@ -16,7 +16,7 @@ height:100vh;
   position:relative;
   border-radius:10px;
   cursor:pointer;
-  overflow:hidden; /* ← esto es clave */
+  overflow:visible; /* ← esto es clave */
 }
 
 .envelope:before{
@@ -29,6 +29,8 @@ height:0;
 border-left:160px solid transparent;
 border-right:160px solid transparent;
 border-top:110px solid #ffb3c1;
+
+z-index: 3;
 }
 
 .card {
@@ -45,14 +47,15 @@ border-top:110px solid #ffb3c1;
   opacity: 0;
   transform: translateY(40px);
   transition: all .8s ease;
-}
 
+  z-index: 1;
+}
 
 .open .card {
   opacity: 1;
   transform: translateY(-150px);
+  z-index: 5;
 }
-
 
 h2{color:#e63946;}
 

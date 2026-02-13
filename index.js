@@ -15,11 +15,13 @@ function openLetter() {
   }, 500);
 }
 
-function yes(){
+function yes(e){
+  e.stopPropagation();
   alert("Muchas gracias por aceptar, te quiero mucho 💖✨\n\nExtráñame poquito ✨");
 }
 
-function moveNo(){
+function moveNo(e){
+  e.stopPropagation();
   let x=Math.random()*200-100;
   let y=Math.random()*200-100;
   document.getElementById("noBtn").style.transform=`translate(${x}px,${y}px)`;

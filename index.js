@@ -1,5 +1,6 @@
-function openLetter(){
-  document.querySelector(".envelope").classList.add("open");
+function openLetter() {
+  document.querySelector('.envelope').classList.toggle('open');
+  document.getElementById("bgMusic").play();
 }
 
 function yes(){

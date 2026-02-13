@@ -36,17 +36,23 @@ border-top:110px solid #ffb3c1;
   background:white;
   width:280px;
   left:20px;
-  bottom:-100%; /* completamente fuera del sobre */
+  top:20px;
   padding:20px;
   border-radius:15px;
   text-align:center;
-  transition: bottom .8s ease;
   box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s ease;
 }
 
+
 .open .card {
-  bottom: 150px;
+  opacity: 1;
+  transform: translateY(-150px);
 }
+
 
 h2{color:#e63946;}
 

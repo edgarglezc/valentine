@@ -2,16 +2,19 @@ function openLetter() {
   const envelope = document.querySelector('.envelope');
   envelope.classList.toggle('open');
 
+  document.getElementById("bgMusic").play();
+
   const elements = document.querySelectorAll('.hidden');
 
   setTimeout(() => {
     elements.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add('show');
-      }, index * 200); // efecto en cascada
+      }, index * 200);
     });
   }, 500);
 }
+
 
 
 function yes(){

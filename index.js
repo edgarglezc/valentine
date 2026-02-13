@@ -1,7 +1,18 @@
 function openLetter() {
-  document.querySelector('.envelope').classList.toggle('open');
-  document.getElementById("bgMusic").play();
+  const envelope = document.querySelector('.envelope');
+  envelope.classList.toggle('open');
+
+  const elements = document.querySelectorAll('.hidden');
+
+  setTimeout(() => {
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('show');
+      }, index * 200); // efecto en cascada
+    });
+  }, 500);
 }
+
 
 function yes(){
   alert("Muchas gracias por aceptar, te quiero mucho 💖✨\n\nExtráñame poquito ✨");

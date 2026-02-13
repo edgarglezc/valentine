@@ -12,20 +12,19 @@
 <body>
 
   <div class="envelope" onclick="openLetter()">
-    <div class="card">
-
+    <div class="card" id="card">
       <h2>💖 Mine 💖</h2>
 
-      <p>Desde que llegaste a mi vida todo es más bonito.</p>
-      <p>¿Quieres ser mi San Valentín? 🌹</p>
+      <p class="hidden">Desde que llegaste a mi vida todo es más bonito.</p>
+      <p class="hidden">¿Quieres ser mi San Valentín? 🌹</p>
 
-      <p>Con cariño<br><b>Hector</b></p>
+      <p class="hidden">Con cariño<br><b>Hector</b></p>
 
-      <button onclick="yes()">Sí 💕</button>
-      <button id="noBtn" onmouseover="moveNo()">No 😈</button>
-
+      <button class="hidden" onclick="yes()">Sí 💕</button>
+      <button class="hidden" id="noBtn" onmouseover="moveNo()">No 😈</button>
     </div>
   </div>
+
 
   <audio id="bgMusic" loop>
     <source src="this_will_be.mp3" type="audio/mpeg">

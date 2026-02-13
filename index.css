@@ -44,8 +44,8 @@ transition:.8s;
 box-shadow:0 10px 20px rgba(0,0,0,.3);
 }
 
-.open .card{
-transform:translateY(-180px);
+.open .card {
+  transform: translateY(-150px);
 }
 
 h2{color:#e63946;}
@@ -73,4 +73,15 @@ animation:fall linear infinite;
 
 @keyframes fall{
 to{transform:translateY(100vh);}
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }

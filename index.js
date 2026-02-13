@@ -1,6 +1,6 @@
 function openLetter() {
-  const envelope = document.querySelector('.envelope');
-  envelope.classList.toggle('open');
+  const container = document.querySelector('.container');
+  container.classList.toggle('open');
 
   document.getElementById("bgMusic").play();
 
@@ -14,8 +14,6 @@ function openLetter() {
     });
   }, 500);
 }
-
-
 
 function yes(){
   alert("Muchas gracias por aceptar, te quiero mucho 💖✨\n\nExtráñame poquito ✨");
